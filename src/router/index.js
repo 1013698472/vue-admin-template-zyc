@@ -57,10 +57,64 @@ export const constantRoutes = [
 
   {
     path: '/user',
-    component: () => import('@/views/user/index'),
-    meta: {title: '用户管理', icon: 'dashboard'}
+    component: Layout,
+    children: [{
+      path: 'user',
+      name: 'user',
+      component: () => import('@/views/user/index'),
+      meta: {title: '用户管理', icon: 'dashboard'}
+    }]
   },
-
+  {
+    path: '/product',
+    component: Layout,
+    children: [{
+      path: 'product',
+      name: 'product',
+      component: () => import('@/views/product/index'),
+      meta: {title: '产品管理', icon: 'dashboard'}
+    }]
+  },
+  {
+    path: '/carousel',
+    component: Layout,
+    children: [{
+      path: 'carousel',
+      name: 'carousel',
+      component: () => import('@/views/carousel/index'),
+      meta: {title: '轮播图管理', icon: 'dashboard'}
+    }]
+  },
+  {
+    path: '/category',
+    component: Layout,
+    children: [{
+      path: 'category',
+      name: 'category',
+      component: () => import('@/views/category/index'),
+      meta: {title: '分类管理', icon: 'dashboard'}
+    }]
+  },
+  {
+    path: '/collect',
+    component: Layout,
+    children: [{
+      path: 'collect',
+      name: 'collect',
+      component: () => import('@/views/collect/index'),
+      meta: {title: '收藏管理', icon: 'dashboard'}
+    }]
+  },
+  {
+    path: '/order',
+    component: Layout,
+    children: [{
+      path: 'order',
+      name: 'order',
+      component: () => import('@/views/order/index'),
+      meta: {title: '订单管理', icon: 'dashboard'}
+    }]
+  },
   {
     path: '/example',
     component: Layout,
